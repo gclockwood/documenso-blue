@@ -3,8 +3,10 @@ import { useEffect } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useLingui } from '@lingui/react/macro';
 import { Trans } from '@lingui/react/macro';
-import { DocumentVisibility, TeamMemberRole } from '@prisma/client';
-import { DocumentDistributionMethod, type Field, type Recipient } from '@prisma/client';
+// Fix for Vite SSR CommonJS module issue
+import pkg from '@prisma/client';
+const { DocumentVisibility, TeamMemberRole, DocumentDistributionMethod } = pkg;
+import type { Field, Recipient } from '@prisma/client';
 import { InfoIcon } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { match } from 'ts-pattern';
@@ -80,7 +82,7 @@ export type AddTemplateSettingsFormProps = {
   isEnterprise: boolean;
   isDocumentPdfLoaded: boolean;
   template: TTemplate;
-  currentTeamMemberRole?: TeamMemberRole;
+  currentTeamMemberRole?: keyof typeof TeamMemberRole;
   onSubmit: (_data: TAddTemplateSettingsFormSchema) => void;
 };
 

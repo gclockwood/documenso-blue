@@ -2,8 +2,10 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { msg } from '@lingui/core/macro';
 import { useLingui } from '@lingui/react';
 import { Trans } from '@lingui/react/macro';
+// Fix for Vite SSR CommonJS module issue
+import pkg from '@prisma/client';
+const { DocumentDistributionMethod, DocumentStatus, RecipientRole } = pkg;
 import type { Field, Recipient } from '@prisma/client';
-import { DocumentDistributionMethod, DocumentStatus, RecipientRole } from '@prisma/client';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 
@@ -117,7 +119,7 @@ export const AddSubjectFormPartial = ({
           <Tabs
             onValueChange={(value) =>
               // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
-              setValue('meta.distributionMethod', value as DocumentDistributionMethod)
+              setValue('meta.distributionMethod', value as keyof typeof DocumentDistributionMethod)
             }
             value={distributionMethod}
             className="mb-2"

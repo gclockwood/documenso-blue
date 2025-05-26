@@ -1,5 +1,7 @@
+// Fix for Vite SSR CommonJS module issue
+import pkg from '@prisma/client';
+const { DocumentDistributionMethod } = pkg;
 import type { DocumentMeta } from '@prisma/client';
-import { DocumentDistributionMethod } from '@prisma/client';
 import { z } from 'zod';
 
 export enum DocumentEmailEvents {

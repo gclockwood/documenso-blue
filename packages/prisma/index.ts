@@ -7,6 +7,9 @@ import type { DB } from './generated/types';
 import { getDatabaseUrl } from './helper';
 import { remember } from './utils/remember';
 
+// Export all Prisma types from our centralized wrapper
+export * from './types';
+
 export const prisma = remember(
   'prisma',
   () =>
