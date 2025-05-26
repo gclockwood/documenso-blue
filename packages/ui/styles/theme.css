@@ -19,8 +19,8 @@
     --card-border-tint: 112 205 159;
     --card-foreground: 222.2 47.4% 11.2%;
 
-    --field-card: 95 74% 90%;
-    --field-card-border: 95.08 71.08% 67.45%;
+    --field-card: 212 56% 90%;
+    --field-card-border: 212 56% 50%;
     --field-card-foreground: 222.2 47.4% 11.2%;
 
     --widget: 0 0% 97%;
@@ -29,8 +29,8 @@
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
 
-    --primary: 95.08 71.08% 67.45%;
-    --primary-foreground: 95.08 71.08% 10%;
+    --primary: 212 56% 50%;
+    --primary-foreground: 212 56% 10%;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -41,7 +41,7 @@
     --destructive: 0 100% 50%;
     --destructive-foreground: 210 40% 98%;
 
-    --ring: 95.08 71.08% 67.45%;
+    --ring: 212 56% 50%;
 
     --radius: 0.5rem;
 
@@ -82,31 +82,31 @@
     --new-white-800: 0, 0%, 90%;
     --new-white-900: 0, 0%, 100%;
 
-    /* Primary - Green */
-    --new-primary-50: 98, 73%, 97%;
-    --new-primary-100: 95, 73%, 94%;
-    --new-primary-200: 94, 70%, 87%;
-    --new-primary-300: 95, 71%, 81%;
-    --new-primary-400: 95, 71%, 74%;
-    --new-primary-500: 95, 71%, 67%;
-    --new-primary-600: 95, 71%, 54%;
-    --new-primary-700: 95, 71%, 41%;
-    --new-primary-800: 95, 71%, 27%;
-    --new-primary-900: 95, 72%, 14%;
-    --new-primary-950: 95, 72%, 7%;
+    /* Primary - Blue */
+    --new-primary-50: 210, 54%, 95%;
+    --new-primary-100: 211, 57%, 90%;
+    --new-primary-200: 212, 55%, 80%;
+    --new-primary-300: 212, 56%, 70%;
+    --new-primary-400: 212, 56%, 60%;
+    --new-primary-500: 212, 56%, 50%;
+    --new-primary-600: 212, 56%, 40%;
+    --new-primary-700: 212, 56%, 30%;
+    --new-primary-800: 212, 55%, 20%;
+    --new-primary-900: 211, 57%, 10%;
+    --new-primary-950: 214, 54%, 5%;
 
     /* Secondary - Info */
-    --new-info-50: 210, 54%, 95%;
-    --new-info-100: 211, 57%, 90%;
-    --new-info-200: 212, 55%, 80%;
-    --new-info-300: 212, 56%, 70%;
-    --new-info-400: 212, 56%, 60%;
-    --new-info-500: 212, 56%, 50%;
-    --new-info-600: 212, 56%, 40%;
-    --new-info-700: 212, 56%, 30%;
-    --new-info-800: 212, 55%, 20%;
-    --new-info-900: 211, 57%, 10%;
-    --new-info-950: 214, 54%, 5%;
+    --new-info-50: 98, 73%, 97%;
+    --new-info-100: 95, 73%, 94%;
+    --new-info-200: 94, 70%, 87%;
+    --new-info-300: 95, 71%, 81%;
+    --new-info-400: 95, 71%, 74%;
+    --new-info-500: 95, 71%, 67%;
+    --new-info-600: 95, 71%, 54%;
+    --new-info-700: 95, 71%, 41%;
+    --new-info-800: 95, 71%, 27%;
+    --new-info-900: 95, 72%, 14%;
+    --new-info-950: 95, 72%, 7%;
 
     /* Secondary - Error */
     --new-error-50: 4, 80%, 96%;
@@ -162,19 +162,19 @@
 
     --field-border: 214.3 31.8% 91.4%;
 
-    --primary: 95.08 71.08% 67.45%;
-    --primary-foreground: 95.08 71.08% 10%;
+    --primary: 212 56% 50%;
+    --primary-foreground: 212 56% 10%;
 
     --secondary: 0 0% 23.4%;
-    --secondary-foreground: 95.08 71.08% 67.45%;
+    --secondary-foreground: 212 56% 50%;
 
     --accent: 0 0% 27.9%;
-    --accent-foreground: 95.08 71.08% 67.45%;
+    --accent-foreground: 212 56% 50%;
 
     --destructive: 0 87% 62%;
     --destructive-foreground: 0 87% 19%;
 
-    --ring: 95.08 71.08% 67.45%;
+    --ring: 212 56% 50%;
 
     --radius: 0.5rem;
 
