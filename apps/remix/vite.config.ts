@@ -39,7 +39,7 @@ export default defineConfig({
   },
   optimizeDeps: {
     entries: ['./app/**/*', '../../packages/ui/**/*', '../../packages/lib/**/*'],
-    include: ['prop-types', 'file-selector', 'attr-accept'],
+    include: ['prop-types', 'file-selector', 'attr-accept', '@prisma/client'],
     exclude: ['node_modules', '@node-rs/bcrypt', '@documenso/pdf-sign', 'sharp'],
   },
   resolve: {
@@ -56,12 +56,16 @@ export default defineConfig({
       canvas: path.resolve(__dirname, './app/types/empty-module.ts'),
     },
   },
-  /**
-   * Note: Re run rollup again to build the server afterwards.
-   *
-   * See rollup.config.mjs which is used for that.
-   */
+  // Add this configuration to handle CommonJS modules properly
+  define: {
+    global: 'globalThis',
+  },
+  // Enhanced build configuration for better CommonJS handling
   build: {
+    commonjsOptions: {
+      include: [/@prisma\/client/, /node_modules/],
+      transformMixedEsModules: true,
+    },
     rollupOptions: {
       external: [
         '@node-rs/bcrypt',

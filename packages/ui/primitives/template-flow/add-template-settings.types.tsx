@@ -1,6 +1,7 @@
 import { msg } from '@lingui/core/macro';
-import { DocumentDistributionMethod } from '@prisma/client';
-import { DocumentVisibility } from '@prisma/client';
+// Fix for Vite SSR CommonJS module issue
+import pkg from '@prisma/client';
+const { DocumentDistributionMethod, DocumentVisibility } = pkg;
 import { z } from 'zod';
 
 import { DEFAULT_DOCUMENT_DATE_FORMAT } from '@documenso/lib/constants/date-formats';

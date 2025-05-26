@@ -1,9 +1,11 @@
 import type { MessageDescriptor } from '@lingui/core';
 import { msg } from '@lingui/core/macro';
-import { DocumentDistributionMethod, DocumentStatus } from '@prisma/client';
+// Fix for Vite SSR CommonJS module issue - use default import
+import pkg from '@prisma/client';
+const { DocumentDistributionMethod, DocumentStatus } = pkg;
 
 export const DOCUMENT_STATUS: {
-  [status in DocumentStatus]: { description: MessageDescriptor };
+  [status in keyof typeof DocumentStatus]: { description: MessageDescriptor };
 } = {
   [DocumentStatus.COMPLETED]: {
     description: msg`Completed`,
@@ -20,7 +22,7 @@ export const DOCUMENT_STATUS: {
 };
 
 type DocumentDistributionMethodTypeData = {
-  value: DocumentDistributionMethod;
+  value: keyof typeof DocumentDistributionMethod;
   description: MessageDescriptor;
 };
 
@@ -33,7 +35,7 @@ export const DOCUMENT_DISTRIBUTION_METHODS: Record<string, DocumentDistributionM
     value: DocumentDistributionMethod.NONE,
     description: msg`None`,
   },
-} satisfies Record<DocumentDistributionMethod, DocumentDistributionMethodTypeData>;
+} satisfies Record<keyof typeof DocumentDistributionMethod, DocumentDistributionMethodTypeData>;
 
 export enum DocumentSignatureType {
   DRAW = 'draw',

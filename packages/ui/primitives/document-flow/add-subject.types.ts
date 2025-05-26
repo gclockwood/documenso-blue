@@ -1,4 +1,6 @@
-import { DocumentDistributionMethod } from '@prisma/client';
+// Fix for Vite SSR CommonJS module issue
+import pkg from '@prisma/client';
+const { DocumentDistributionMethod } = pkg;
 import { z } from 'zod';
 
 import { ZDocumentEmailSettingsSchema } from '@documenso/lib/types/document-email';

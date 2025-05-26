@@ -1,5 +1,7 @@
 import { extendZodWithOpenApi } from '@anatine/zod-openapi';
-import {
+// Fix for Vite SSR CommonJS module issue - use default import as suggested
+import pkg from '@prisma/client';
+const {
   DocumentDataType,
   DocumentDistributionMethod,
   DocumentSigningOrder,
@@ -10,7 +12,7 @@ import {
   SigningStatus,
   TeamMemberRole,
   TemplateType,
-} from '@prisma/client';
+} = pkg;
 import { z } from 'zod';
 
 import { DATE_FORMATS, DEFAULT_DOCUMENT_DATE_FORMAT } from '@documenso/lib/constants/date-formats';

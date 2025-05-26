@@ -1,14 +1,14 @@
-import type { DocumentDistributionMethod } from '@prisma/client';
-import {
+// Fix for Vite SSR CommonJS module issue
+import pkg from '@prisma/client';
+const {
   DocumentSigningOrder,
   DocumentSource,
-  type Field,
-  type Recipient,
   RecipientRole,
   SendStatus,
   SigningStatus,
   WebhookTriggerEvents,
-} from '@prisma/client';
+} = pkg;
+import type { DocumentDistributionMethod, Field, Recipient } from '@prisma/client';
 import { DateTime } from 'luxon';
 import { match } from 'ts-pattern';
 
@@ -81,7 +81,7 @@ export type CreateDocumentFromTemplateOptions = {
     password?: string;
     dateFormat?: string;
     redirectUrl?: string;
-    signingOrder?: DocumentSigningOrder;
+    signingOrder?: keyof typeof DocumentSigningOrder;
     language?: SupportedLanguageCodes;
     distributionMethod?: DocumentDistributionMethod;
     allowDictateNextSigner?: boolean;
